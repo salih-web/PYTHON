@@ -1,0 +1,21 @@
+def calc(x, y, ops):
+
+    if ops not in '+-/*':
+        return 'sayı girin: "+, -, *, /"!'
+
+    if ops == '+':
+        return(str(x) + ' ' + ops + ' ' + str(y) + ' = ' + str(x + y))
+    if ops == '-':
+        return(str(x) + ' ' + ops + ' ' + str(y) + ' = ' + str(x - y))
+    if ops == '*':
+        return(str(x) + ' ' + ops + ' ' + str(y) + ' = ' + str(x * y))
+    if ops == '/':
+        return(str(x) + ' ' + ops + ' ' + str(y) + ' = ' + str(x / y))
+
+while True:
+
+	x = int(input('sayı girin: '))
+	y = int(input('sayı girin: '))
+	ops = input("işlem seçin +, -, *, / ")
+
+	print(calc(x, y, ops))
