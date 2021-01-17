@@ -1,0 +1,35 @@
+taskagitmakas=["taş","kağıt","makas"]
+
+import random 
+
+taş=taskagitmakas[0]
+kağıt=taskagitmakas[1]
+makas=taskagitmakas[2]
+
+gir=input("taş mı? kağıt mı? makas mı?")
+a=random.choice(taskagitmakas)
+
+print("bilgisayar",a,"seçti")
+
+if gir==kağıt:
+    if kağıt==a:
+        print("berabere")
+    elif taş==a:
+        print("kazandın bilgisayar kaybetti")
+    elif makas==a:
+        print("kaybettin bilgisayar kazandı")
+
+elif gir==makas:
+    if taş==a:
+        print("kaybettin bilgisayar kazandı")
+    elif makas==a:
+        print("berabere")
+    elif kağıt==a:
+        print("kazandın bilgisayar kaybetti")
+elif gir==taş:
+    if taş==a:
+        print("berabere")
+    elif makas==a:
+        print("kazandın bilgisayar kaybetti")
+    elif kağıt==a:
+        print("kaybettin bilgisayar kazandı")
