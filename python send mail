@@ -1,0 +1,17 @@
+include 'class.phpmailer.php';
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->SMTPAuth = true;
+$mail->Host = 'smtp.yandex.com';
+$mail->Port = 587;
+$mail->Username = 'salih-web@yandex.com';
+$mail->Password = '05439115664.Bb';
+$mail->SetFrom($mail->salih-web@yandex, 'salih-web@yandex');
+$mail->AddAddress('msbbulut@yandex.com', 'msbbulut@yandex');
+$mail->CharSet = 'UTF-8';
+$mail->Subject = 'Mail Başlığı';merhabalar
+$mail->MsgHTML('Mailin içeriği!'); merhabalar
+if($mail->Send()) {
+    echo 'Mail gönderildi!';
+} else {
+    echo 'Mail gönderilirken bir hata oluştu: ' . $mail->ErrorInfo;
